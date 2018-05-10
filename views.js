@@ -7,7 +7,7 @@ const displayCountdown = seconds => {
   console.log(chalk.cyan(figlet.textSync("My Timer Countdown")));
   // Your code here...
   let minutes = parseInt(seconds/60)
-  let secs = seconds - minutes >= 10 && seconds%60 !== 0? ` : ${seconds - minutes*60}` : ` : 0${seconds - minutes*60}`
+  let secs = seconds - minutes*60 >= 10 && seconds%60 !== 0? ` : ${seconds - minutes*60}` : ` : 0${seconds - minutes*60}`
   minutes = minutes >= 10? `${minutes}` : `0${minutes}`
   if(seconds === 'FINISHED!'){
     minutes = seconds
