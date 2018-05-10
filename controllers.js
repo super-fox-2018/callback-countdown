@@ -5,9 +5,9 @@ const {
 const timer = seconds => {
 
   let countdown = setInterval(function() {
-    seconds -= 1
-    displayCountdown(seconds) // call minutes and seconds if exist
-    if (seconds === 0) {
+    seconds--
+    displayCountdown(seconds) 
+    if (seconds == 0) {
       clearInterval(countdown)
     }
   }, 1000)
