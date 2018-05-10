@@ -6,7 +6,16 @@ const displayCountdown = seconds => {
   clear();
   console.log(chalk.cyan(figlet.textSync("Timer")));
   // Your code here...
-  console.log(secondFormatter(seconds));
+  let secondStr = secondFormatter(seconds)
+
+  if (seconds <= 5) {
+    console.log(chalk.red(figlet.textSync(secondStr)));
+  } else if (seconds < 10 && seconds > 5) {
+    console.log(chalk.yellow(figlet.textSync(secondStr)));
+  } else {
+    console.log(chalk.green(figlet.textSync(secondStr)));
+
+  }
 
 };
 
