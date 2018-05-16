@@ -14,9 +14,7 @@ const displayCountdown = seconds => {
     console.log(chalk.yellow(figlet.textSync(secondStr)));
   } else {
     console.log(chalk.green(figlet.textSync(secondStr)));
-
   }
-
 };
 
 function secondFormatter(seconds) {
